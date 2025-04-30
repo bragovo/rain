@@ -16,7 +16,7 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: var(--base_color);
-  border-bottom: 1px solid color-mod(var(--base_color) alpha(-80%));
+  border-bottom: 1px solid rgb(from var(--base_color) r g b  / 20%);
 }
 
 ul {
