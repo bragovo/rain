@@ -47,7 +47,7 @@
 
 .header_logo {
   position: absolute;
-  width: 120px;
+  width: 126px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -56,10 +56,10 @@
   & a {
     border-bottom: 0;
     display: block;
+    color: #fff;
 
     & svg {
       display: block;
-      fill: #fff;
     }
   }
 
@@ -85,39 +85,6 @@
 
     & a {
       color: var(--light_color);
-    }
-  }
-}
-
-.city {
-  font-size: 11px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  color: #fff;
-
-  & .current {
-    cursor: pointer;
-
-    & svg {
-      fill: #fff;
-      height: 7px;
-      margin-left: 4px;
-      width: 7px;
-    }
-  }
-
-  & .switch {
-    visibility: hidden;
-
-    &.active {
-      visibility: visible;
-    }
-
-    & a {
-      color: #fff;
     }
   }
 }
@@ -198,60 +165,6 @@
   }
 }
 
-.sale {
-  margin-bottom: calc(var(--yr) * var(--s5));
-
-  & .header_burger {
-    & svg {
-      fill: #141414;
-    }
-  }
-
-  & .city {
-    color: #141414;
-
-    & svg {
-      fill: #141414;
-    }
-  }
-
-  & .switch {
-    & a {
-      color: #141414;
-    }
-  }
-
-  & .header_logo {
-    & a {
-      & svg {
-        fill: #141414;
-      }
-    }
-  }
-
-  & .header_menu {
-    & a {
-      color: #141414;
-    }
-  }
-
-  & .button {
-    box-shadow: 0 0 0 1px color-mod(#141414 alpha(-70%));
-  }
-
-  & .header_book {
-    & .text {
-      color: #141414;
-    }
-
-    & .icon {
-      & svg {
-        fill: #141414;
-      }
-    }
-  }
-}
-
 .toggled {
   bottom: 0;
   position: fixed;
@@ -273,10 +186,6 @@
     visibility: visible;
   }
 
-  & .city {
-    display: none;
-  }
-
   & .header_burger {
     & svg {
       fill: var(--base_color);
@@ -286,13 +195,13 @@
   & .header_logo {
     & a {
       & svg {
-        fill: var(--base_color);
+        color: var(--base_color);
       }
     }
   }
 
   & .button {
-    box-shadow: 0 0 0 1px color-mod(var(--base_color) alpha(-70%));
+    box-shadow: 0 0 0 1px rgb(from var(--base_color) r g b / 30%);
   }
 
   & .header_book {
