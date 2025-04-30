@@ -1,0 +1,329 @@
+.top {
+  position: relative;
+  color: #fff;
+  height: 400px;
+  background-image: url('../../images/about/top_moscow.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0 calc(-1 * var(--xr));
+
+  &.active {
+    background-image: url('../../images/about/top_nizhny.jpg');
+  }
+
+  @media (--s) {
+    margin: 0 calc(-1 * calc(var(--xr) * 2));
+    height: auto;
+  }
+
+  @media (--l) {
+    margin: 0 calc(-1 * calc(var(--xr) * 3));
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(var(--yr) * 36);
+    background: linear-gradient(to top, color-mod(#000 alpha(-30%)), color-mod(#000 alpha(-100%)));
+    z-index: 0;
+
+    @media (--m) {
+      height: calc(var(--yr) * 72);
+    }
+  }
+}
+
+.placeholder {
+  display: none;
+  position: relative;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 50%;
+    position: relative;
+    z-index: -1;
+  }
+
+  @media (--s) {
+    display: block;
+  }
+}
+
+.description {
+  composes: at from '../Fonts.module.css';
+
+  @media (--l) {
+    width: calc(12 / 16 * 100%);
+    margin: calc(var(--yr) * 24) calc(2 / 16 * 100%);
+  }
+}
+
+.photo {
+  @media (--l) {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(14 / 16 * 100%);
+  }
+}
+
+.tables {
+  background-image: url('../../images/about/tables_moscow.jpg');
+  background-size: cover;
+  background-position: 50%;
+  background-color: #f1f1f1;
+
+  &.active {
+    background-image: url('../../images/about/tables_nizhny.jpg');
+  }
+
+  &::before {
+    width: 100%;
+    display: block;
+    content: "";
+    z-index: -1;
+    padding-top: calc(4 / 5 * 100%);
+
+    @media (--s) {
+      padding-top: calc(9 / 16 * 100%);
+    }
+  }
+}
+
+.senses {
+  @media (--s) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: var(--xr);
+  }
+
+  @media (--l) {
+    grid-gap: calc(var(--xr) * 2);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & .txt {
+    margin-bottom: calc(var(--yr) * 9);
+
+    @media (--s) {
+      margin: 0;
+      grid-column: 1 / 7;
+    }
+  }
+
+  & .feel {
+    background-image: url('../../images/about/feel_moscow.jpg');
+    background-size: cover;
+    background-position: 50%;
+    background-color: #f1f1f1;
+
+    &.active {
+      background-image: url('../../images/about/feel_nizhny.jpg');
+    }
+
+    &::before {
+      width: 100%;
+      display: block;
+      content: "";
+      z-index: -1;
+      padding-top: calc(5 / 4 * 100%);
+    }
+
+    @media (--s) {
+      grid-column: 7 / 13;
+    }
+  }
+}
+
+.quote {
+  composes: at from '../Fonts.module.css';
+
+  @media (--s) {
+    padding-right: 25%;
+  }
+
+  @media (--l) {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & .txt {
+    font-family: var(--ff_serif);
+  }
+
+  & .author {
+    font-family: var(--fn_serif);
+    color: #727272;
+  }
+}
+
+.two_photos {
+  @media (--s) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--xr);
+  }
+
+  @media (--l) {
+    grid-gap: calc(var(--xr) * 2);
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(14 / 16 * 100%);
+  }
+
+  & .first {
+    margin-bottom: calc(var(--yr) * 3);
+    background-image: url('../../images/about/two_images_1_moscow.jpg');
+    background-size: cover;
+    background-position: 50%;
+    background-color: #f1f1f1;
+
+    &.active {
+      background-image: url('../../images/about/two_images_1_nizhny.jpg');
+    }
+
+    &::before {
+      width: 100%;
+      display: block;
+      content: "";
+      z-index: -1;
+      padding-top: calc(4 / 5 * 100%);
+    }
+  }
+
+  & .second {
+    margin-bottom: calc(var(--yr) * 3);
+    background-image: url('../../images/about/two_images_2_moscow.jpg');
+    background-size: cover;
+    background-position: 50%;
+    background-color: #f1f1f1;
+
+    &.active {
+      background-image: url('../../images/about/two_images_2_nizhny.jpg');
+    }
+
+    &::before {
+      width: 100%;
+      display: block;
+      content: "";
+      z-index: -1;
+      padding-top: calc(4 / 5 * 100%);
+    }
+  }
+}
+
+.space {
+  @media (--s) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: var(--xr);
+  }
+
+  @media (--l) {
+    grid-gap: calc(var(--xr) * 2);
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+
+  & .txt {
+    margin-bottom: calc(var(--yr) * 3);
+
+    @media (--s) {
+      margin: 0;
+      grid-column: 1 / 10;
+    }
+  }
+}
+
+.contacts {
+  composes: small from '../Fonts.module.css';
+
+  @media (--s) {
+    grid-column: 10 / 13;
+  }
+}
+
+.roads {
+  @media (--l) {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & .active {
+    @media (--s) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: var(--xr);
+
+      & .map {
+        &::before {
+          padding-top: calc(5 / 4 * 100%);
+        }
+      }
+    }
+
+    @media (--l) {
+      grid-gap: calc(var(--xr) * 2);
+    }
+
+    & .map {
+      &::before {
+        padding-top: calc(5 / 4 * 100%);
+      }
+    }
+  }
+
+  & .txt {
+    margin-bottom: calc(var(--yr) * 6);
+  }
+
+  & .road {
+    margin-bottom: calc(var(--yr) * 3);
+    background-image: url('../../images/about/roads.jpg');
+    background-size: cover;
+    background-position: 50%;
+    background-color: #f1f1f1;
+
+    &::before {
+      width: 100%;
+      display: block;
+      content: "";
+      z-index: -1;
+      padding-top: calc(5 / 4 * 100%);
+    }
+  }
+
+  & .map {
+    margin-bottom: calc(var(--yr) * 3);
+    position: relative;
+
+    & .ymap {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &::before {
+      width: 100%;
+      display: block;
+      content: "";
+      z-index: -1;
+      padding-top: calc(4 / 5 * 100%);
+
+      @media (--s) {
+        padding-top: calc(9 / 16 * 100%);
+      }
+    }
+  }
+}
