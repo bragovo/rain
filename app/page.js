@@ -7,8 +7,8 @@ import React, { useEffect, useRef } from 'react'
 // import Price from '../Price'
 // import Instagram from '../Instagram'
 import classNames from 'classnames'
-import styles from './page.module.css'
 import pages from './pages.module.css'
+import styles from './page.module.css'
 import button from './button.module.css'
 // import { deserialize } from 'jsonapi-deserializer'
 
@@ -104,7 +104,7 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
           <h2>Пространство</h2>
 
           <p>RAIN — это пространство для современных, интеллигентных, уверенных, естественных, веселых и непринужденных девушек.
-             Ценящих свободу самовыражения, свободу творчества, свободу быть собой. Которые привыкли к качественному обслуживанию по доступным ценам.</p>
+            Ценящих свободу самовыражения, свободу творчества, свободу быть собой. Которые привыкли к качественному обслуживанию по доступным ценам.</p>
         </div>
 
         <div className={styles.free}>
