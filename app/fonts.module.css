@@ -1,4 +1,3 @@
-h1,
 .h1 {
   font-size: calc(var(--yr) * 6);
   line-height: calc(var(--yr) * 8);
@@ -16,7 +15,6 @@ h1,
   }
 }
 
-h2,
 .h2 {
   font-size: calc(var(--yr) * 5);
   line-height: calc(var(--yr) * 7);
@@ -34,7 +32,6 @@ h2,
   }
 }
 
-h3,
 .h3 {
   font-size: calc(var(--yr) * 4);
   line-height: calc(var(--yr) * 6);
@@ -65,27 +62,4 @@ h3,
 .small {
   font-size: calc(var(--yr) * 3.25);
   line-height: calc(var(--yr) * 6);
-}
-
-h1,
-h2,
-p {
-  font-weight: var(--fw_normal);
-  margin: 0 0 calc(var(--yr) * 3);
-
-  @media (--l) {
-    margin: 0 0 calc(var(--yr) * 4);
-  }
-
-  &:last-child {
-    margin: 0;
-  }
-}
-
-h3 {
-  margin: 0 0 calc(var(--yr) * 6);
-
-  @media (--l) {
-    margin: 0 0 calc(var(--yr) * 16);
-  }
 }

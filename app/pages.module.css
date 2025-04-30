@@ -22,7 +22,7 @@
 }
 
 .text {
-  composes: at from './Fonts.module.css';
+  composes: at from './fonts.module.css';
   position: absolute;
   bottom: calc(var(--yr) * 9);
   left: var(--xr);
