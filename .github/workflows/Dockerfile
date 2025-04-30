@@ -11,5 +11,5 @@ FROM nginx:alpine
 
 WORKDIR /app
 
-ADD ./conf.d /etc/nginx/conf.d
+ADD .github/workflows/conf.d /etc/nginx/conf.d
 COPY --from=builder /app/dist /app
