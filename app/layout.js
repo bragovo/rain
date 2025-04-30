@@ -1,7 +1,11 @@
 import localFont from 'next/font/local'
+import classNames from "classnames";
 
 import "./globals.css";
-import classNames from "classnames";
+import 'normalize.css/normalize.css'
+import '@glidejs/glide/dist/css/glide.core.css'
+
+import Header from './layout/header';
 
 const FN = localFont({
   src: [
@@ -35,8 +39,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={classNames(FN.className)}>
+        <Header />
+
         {children}
       </body>
     </html>
