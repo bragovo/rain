@@ -1,0 +1,10 @@
+.a {
+  display: block;
+  padding: calc(var(--yr) * 2);
+  color: inherit;
+}
+
+.a svg {
+  display: block;
+  height: calc(var(--yr) * 8);
+}

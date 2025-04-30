@@ -1,0 +1,12 @@
+:root {
+  --xr: 1.25rem;
+  --yr: 0.25rem;
+}
+
+body {
+  margin: 0;
+}
+
+@custom-media --s (min-width: 720px);
+@custom-media --m (min-width: 980px);
+@custom-media --l (min-width: 1260px);

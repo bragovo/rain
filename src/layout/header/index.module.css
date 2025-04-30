@@ -1,0 +1,81 @@
+.root {
+  padding: calc(var(--yr) * 3) var(--xr);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.root.active {
+  bottom: 0;
+  background: white;
+}
+
+.cont {
+  position: relative;
+}
+
+.root.active .cont::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--yr) * -3);
+  border-bottom: 1px solid red;
+}
+
+.logo {
+  width: fit-content;
+  margin: auto;
+}
+
+.nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.booking {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.menu {
+  position: absolute;
+  top: calc(var(--yr) * 36);
+  left: 0;
+  right: 0;
+}
+
+@media (--l) {
+  .root {
+    position: absolute;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .menu {
+    position: static;
+  }
+
+  .booking {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .root.active {
+    bottom: auto;
+    background-color: red;
+  }
+}
