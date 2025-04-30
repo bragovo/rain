@@ -1,28 +1,32 @@
-import React, { useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
+"use client"
 
-import Slider from '../Slider'
-import Price from '../Price'
-import Instagram from '../Instagram'
+import React, { useEffect, useRef } from 'react'
+// import PropTypes from 'prop-types'
+
+// import Slider from '../Slider'
+// import Price from '../Price'
+// import Instagram from '../Instagram'
 import classNames from 'classnames'
-import styles from './Index.module.css'
-import page from '../Page.module.css'
+import styles from './page.module.css'
+import pages from '../pages.module.css'
 import button from '../Button.module.css'
-import { deserialize } from 'jsonapi-deserializer'
+// import { deserialize } from 'jsonapi-deserializer'
 
 import Parallax from 'parallax-js'
 import Glide from '@glidejs/glide'
 
-Index.propTypes = {
-  city: PropTypes.string,
-  specialists: PropTypes.object,
-  prices: PropTypes.object,
-  instagram: PropTypes.string
-}
+// Index.propTypes = {
+//   city: PropTypes.string,
+//   specialists: PropTypes.object,
+//   prices: PropTypes.object,
+//   instagram: PropTypes.string
+// }
 
 export default function Index ({ city, specialists: specialistsData, prices: pricesData, instagram }) {
-  const prices = deserialize(pricesData)
-  const specialists = deserialize(specialistsData)
+  // const prices = deserialize(pricesData)
+  // const specialists = deserialize(specialistsData)
+  const prices = []
+  const specialists =[]
   const list = useRef()
   const scene = useRef()
 
@@ -50,7 +54,7 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
   }, [])
 
   return (
-    <div className={page.root}>
+    <div className={pages.root}>
       <div className={styles.top}>
         <div className={styles.placeholder} />
 
@@ -60,7 +64,7 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
         </div>
       </div>
 
-      <section className={classNames(page.section, styles.description)}>
+      <section className={classNames(pages.section, styles.description)}>
         <div className={styles.text}>
           Стильный маникюр и педикюр для прогрессивных людей. Бережное отношение к мелочам и деталям.
           Акцент на естественность, натуральность, элегантность и женственность. Пространство маникюрных встреч RAIN <em>#irinarain</em>
@@ -91,11 +95,11 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
         </div>
       </section>
 
-      <section className={classNames(page.section, styles.slider)}>
-        <Slider />
+      <section className={classNames(pages.section, styles.slider)}>
+        {/* <Slider /> */}
       </section>
 
-      <section className={classNames(page.section, styles.space)}>
+      <section className={classNames(pages.section, styles.space)}>
         <div className={styles.text}>
           <h2>Пространство</h2>
 
@@ -114,7 +118,7 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
         </div>
       </section>
 
-      <section className={classNames(page.section, styles.masters)}>
+      <section className={classNames(pages.section, styles.masters)}>
         <div className={styles.text}>
           <h2>Мастера</h2>
 
@@ -122,7 +126,7 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
         </div>
       </section>
 
-      <section className={classNames(page.section, styles.list)}>
+      <section className={classNames(pages.section, styles.list)}>
         <div className="glide" ref={list}>
           <div className="glide__track" data-glide-el="track">
             {specialists &&
@@ -152,11 +156,11 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
         </div>
       </section>
 
-      <section className={page.section}>
+      <section className={pages.section}>
         <div className={styles.sis}></div>
       </section>
 
-      <section className={classNames(page.section, styles.philosophy)}>
+      <section className={classNames(pages.section, styles.philosophy)}>
         <div className={styles.text}>
           <h2>Философия</h2>
 
@@ -170,7 +174,7 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
         <div className={styles.phil} />
       </section>
 
-      <section className={classNames(page.section, styles.youtube)}>
+      <section className={classNames(pages.section, styles.youtube)}>
         <div className={styles.video}>
           <iframe src="https://www.youtube.com/embed/KlSZp-dTnQk" frameBorder="0" allowFullScreen={true}></iframe>
         </div>
@@ -180,20 +184,20 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
         </div>
       </section>
 
-      <section className={page.section}>
-        <Price
+      <section className={pages.section}>
+        {/* <Price
           city={city}
           prices={prices}
-        />
+        /> */}
       </section>
 
-      <section className={classNames(page.section, styles.instagram)}>
-        <Instagram
+      <section className={classNames(pages.section, styles.instagram)}>
+        {/* <Instagram
           instagram_path={instagram}
-        />
+        /> */}
       </section>
 
-      <section className={classNames(page.section, styles.design)}>
+      <section className={classNames(pages.section, styles.design)}>
         <div className={styles.text}>
           <h2>Дизайн</h2>
 
@@ -210,7 +214,7 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
         </div>
       </section>
 
-      <section className={classNames(page.section, styles.community)}>
+      <section className={classNames(pages.section, styles.community)}>
         <div className={styles.text}>
           <h2>Сообщество</h2>
 
@@ -221,7 +225,7 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
         </div>
       </section>
 
-      <section className={page.section}>
+      <section className={pages.section}>
         <div className={styles.rain}></div>
       </section>
     </div>
