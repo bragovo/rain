@@ -17,7 +17,6 @@ module.exports = {
       features: {
         'custom-media-queries': true,
         'nesting-rules': true,
-        'color-mod-function': { unresolved: 'warn' },
       },
       stage: 3
       }

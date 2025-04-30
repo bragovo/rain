@@ -191,7 +191,7 @@
 
 .button {
   padding: 0;
-  box-shadow: 0 0 0 1px color-mod(var(--light_color) alpha(-70%));
+  box-shadow: 0 0 0 1px rgb(from var(--light_color) r g b / 30%);
 
   @media (--s) {
     padding: 8px 0;
