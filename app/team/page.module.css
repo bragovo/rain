@@ -3,7 +3,7 @@
   margin: 0;
   color: #fff;
   height: 400px;
-  background-image: url('../../images/team/top.jpg');
+  background-image: url('/images/team/top.jpg');
   background-size: cover;
   background-position: center;
   margin: 0 calc(-1 * var(--xr));
@@ -24,7 +24,7 @@
     right: 0;
     bottom: 0;
     height: calc(var(--yr) * 36);
-    background: linear-gradient(to top, color-mod(#000 alpha(-30%)), color-mod(#000 alpha(-100%)));
+    background: linear-gradient(to top, rgb(from #000 r g b / 70%), rgb(from #000 r g b / 0));
     z-index: 0;
 
     @media (--m) {
@@ -52,7 +52,7 @@
 }
 
 .description {
-  composes: at from '../Fonts.module.css';
+  composes: at from '../fonts.module.css';
 
   @media (--l) {
     width: calc(12 / 16 * 100%);
@@ -72,7 +72,7 @@
 }
 
 .girls {
-  background-image: url('../../images/team/girls.jpg');
+  background-image: url('/images/team/girls.jpg');
   background-size: cover;
   background-position: 50%;
   background-color: #f1f1f1;
@@ -137,7 +137,7 @@
 }
 
 .name {
-  composes: h2 from '../Fonts.module.css';
+  composes: h2 from '../fonts.module.css';
 }
 
 .list {

@@ -1,18 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { deserialize } from 'jsonapi-deserializer'
-
 import classNames from 'classnames'
-import styles from './Team.module.css'
-import page from '../Page.module.css'
 
-Team.propTypes = {
-  city: PropTypes.string,
-  specialists: PropTypes.object
-}
+import page from '../pages.module.css'
+import styles from './page.module.css'
 
-export default function Team ({ city, specialists: specialistsData }) {
-  const specialists = deserialize(specialistsData)
+export default function Team () {
+  const specialists = []
 
   return (
     <div className={page.root}>
