@@ -6,6 +6,7 @@ import '@glidejs/glide/dist/css/glide.core.css'
 import "./globals.css";
 
 import Header from './layout/header';
+import Footer from './footer';
 
 const FN = localFont({
   src: [
@@ -34,6 +35,8 @@ export default function RootLayout({ children }) {
         <Header />
 
         {children}
+
+        <Footer />
 
         <script src="//w81206.yclients.com/widgetJS" />
       </body>
