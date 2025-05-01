@@ -1,5 +1,8 @@
+"use client"
+
 import React from 'react'
 import { Playfair_Display } from 'next/font/google'
+import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
 import classNames from 'classnames'
 import page from '../pages.module.css'
@@ -100,11 +103,11 @@ export default function About () {
 
           <div>
             <div className={styles.map}>
-              {/* <YMaps>
+              <YMaps>
                 <Map className={styles.ymap} width={'100%'} defaultState={{ center: [55.7039, 37.6162], zoom: 17, width: 100 }}>
                   <Placemark defaultGeometry={[55.7039, 37.6162]} />
                 </Map>
-              </YMaps> */}
+              </YMaps>
             </div>
 
             <a href="https://yandex.ru/maps/org/rain/206263032856/" target="_blank" rel="noreferrer">
