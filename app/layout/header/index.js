@@ -1,8 +1,7 @@
 "use client"
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import classNames from 'classnames'
-import Image from 'next/image'
 
 import button from '../../button.module.css'
 import styles from './index.module.css'
@@ -21,10 +20,19 @@ function Logo() {
 
 export default function Header () {
   const [toggle, setToggle] = useState(false)
+  const yc = useRef()
+  const [init, setInit] = useState(false)
 
   const handleToggle = () => {
     setToggle(!toggle)
   }
+
+  useEffect(() => {
+    if (!init) {
+      yWidget.addClickEventToButton(yc.current);
+      setInit(true)
+    }
+  }, [])
 
   return (
     <div className={classNames(styles.header, { [styles.toggled]: toggle })}>
@@ -62,7 +70,7 @@ export default function Header () {
         </div>
 
         <div className={styles.header_book}>
-            <a className={classNames('ms_booking', button.sign_up, styles.button)} href="#" data-url="https://n81206.yclients.com/company:95580">
+            <a ref={yc} className={classNames(button.sign_up, styles.button)} href="#" data-url="https://n81206.yclients.com/company:95580">
               <>
                 <div className={styles.icon}>
                   <svg viewBox="0 0 38 38">

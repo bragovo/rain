@@ -1,53 +1,60 @@
-import React, { Component } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import classNames from 'classnames'
 
 import button from '../button.module.css'
 import styles from './index.module.css'
 
 
-export default class Prices extends Component {
-  render() {
-    const prices = pricesData.map(p => p.attributes)
+export default function Prices () {
+  const yc = useRef()
+  const [init, setInit] = useState(false)
+  const prices = pricesData.map(p => p.attributes)
 
-    return(
-      <div className={styles.root}>
-        <div className={styles.text}>
-          <h2>Цены</h2>
-          <p>Изо дня в день и от сезона к сезону мы создаем nail art, подчеркиваем вашу внутреннюю и внешнюю красоту.</p>
-        </div>
-        <div className={styles.left}>
-          {prices.filter(p => p.position == 'left').map((price,_) =>
-            <div key={_}>
-              <div className={styles.price_row} key={_}>
-                <div className={styles.prices_row}>
-                  <div className={styles.title}>{price.title}</div>
-                  <div className={styles.price}>{price.price_msk} <i>₽</i></div>
-                </div>
-              </div>
-              <div className={styles.desc}>{price.description}</div>
-            </div>
-          )}
-        </div>
+  useEffect(() => {
+    if (!init) {
+      yWidget.addClickEventToButton(yc.current);
+      setInit(true)
+    }
+  }, [])
 
-        <div className={styles.right}>
-          {prices.filter(p => p.position == 'right').map((price,_) =>
-            <div key={_}>
-              <div className={styles.price_row} key={_}>
-                <div className={styles.prices_row}>
-                  <div className={styles.title}>{price.title}</div>
-                  <div className={styles.price}>{price.price_msk} <i>₽</i></div>
-                </div>
-              </div>
-              <div className={styles.desc}>{price.description}</div>
-            </div>
-          )}
-        </div>
-        <div className={styles.under}>
-          <a className={classNames("ms_booking", button.sign_up)} href="#" data-url="https://n81206.yclients.com/company:95580">Записаться</a>
-        </div>
+  return(
+    <div className={styles.root}>
+      <div className={styles.text}>
+        <h2>Цены</h2>
+        <p>Изо дня в день и от сезона к сезону мы создаем nail art, подчеркиваем вашу внутреннюю и внешнюю красоту.</p>
       </div>
-    )
-  }
+      <div className={styles.left}>
+        {prices.filter(p => p.position == 'left').map((price,_) =>
+          <div key={_}>
+            <div className={styles.price_row} key={_}>
+              <div className={styles.prices_row}>
+                <div className={styles.title}>{price.title}</div>
+                <div className={styles.price}>{price.price_msk} <i>₽</i></div>
+              </div>
+            </div>
+            <div className={styles.desc}>{price.description}</div>
+          </div>
+        )}
+      </div>
+
+      <div className={styles.right}>
+        {prices.filter(p => p.position == 'right').map((price,_) =>
+          <div key={_}>
+            <div className={styles.price_row} key={_}>
+              <div className={styles.prices_row}>
+                <div className={styles.title}>{price.title}</div>
+                <div className={styles.price}>{price.price_msk} <i>₽</i></div>
+              </div>
+            </div>
+            <div className={styles.desc}>{price.description}</div>
+          </div>
+        )}
+      </div>
+      <div className={styles.under}>
+        <a ref={yc} className={classNames(button.sign_up)} href="#" data-url="https://n81206.yclients.com/company:95580">Записаться</a>
+      </div>
+    </div>
+  )
 }
 
 const pricesData = [

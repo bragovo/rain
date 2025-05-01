@@ -5,8 +5,6 @@ import page from '../pages.module.css'
 import styles from './page.module.css'
 
 export default function Team () {
-  // const specialists = []
-
   return (
     <div className={page.root}>
       <div className={styles.top}>

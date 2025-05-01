@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Parallax from 'parallax-js'
 import Glide from '@glidejs/glide'
 import classNames from 'classnames'
@@ -16,28 +16,35 @@ import styles from './page.module.css'
 export default function Index () {
   const list = useRef()
   const scene = useRef()
+  const yc = useRef()
+  const [init, setInit] = useState(false)
 
   useEffect(() => {
-    const parallaxInstance = new Parallax(scene.current)
+    if (!init) {
+      const parallaxInstance = new Parallax(scene.current)
 
-    const glide = new Glide(list.current, {
-      perView: 4.45,
-      gap: 20,
-      breakpoints: {
-        760: {
-          perView: 1.19
-        },
-        1020: {
-          perView: 4.3
-        },
-        1430: {
-          perView: 5.65
+      const glide = new Glide(list.current, {
+        perView: 4.45,
+        gap: 20,
+        breakpoints: {
+          760: {
+            perView: 1.19
+          },
+          1020: {
+            perView: 4.3
+          },
+          1430: {
+            perView: 5.65
+          }
         }
-      }
-    })
-    glide.mount()
+      })
+      glide.mount()
 
-    parallaxInstance.enable()
+      parallaxInstance.enable()
+
+      yWidget.addClickEventToButton(yc.current);
+      setInit(true)
+    }
   }, [])
 
   return (
@@ -62,7 +69,7 @@ export default function Index () {
           <p>10:00 — 22:00</p>
           <p>Духовской переулок, дом 17, строение 15 <br />Москва</p>
           <p>
-            <a className={classNames('ms_booking', button.sign_up, styles.button)} href="#" data-url="https://n81206.yclients.com/company:95580">Записаться</a>
+            <a ref={yc} className={classNames(button.sign_up, styles.button)} href="#" data-url="https://n81206.yclients.com/company:95580">Записаться</a>
           </p>
         </div>
       </section>
@@ -113,9 +120,9 @@ export default function Index () {
                       {specialist.name} | <span className={styles.service}>{specialist.service}</span>
                     </div>
 
-                    <div className={styles.book}>
-                      <a className={classNames('ms_booking', button.sign_up, styles.button)} href="#" data-url={`https://n81206.yclients.com/?o=m${specialist.yid}`}>Записаться</a>
-                    </div>
+                    {/* <div className={styles.book}>
+                      <a className={classNames(button.sign_up, styles.button)} href="#" data-url={`https://n81206.yclients.com/?o=m${specialist.yid}`}>Записаться</a>
+                    </div> */}
                   </div>
                 )}
               </div>
