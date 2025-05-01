@@ -2,13 +2,13 @@
   position: relative;
   color: #fff;
   height: 400px;
-  background-image: url('../../images/about/top_moscow.jpg');
+  background-image: url('/images/about/top_moscow.jpg');
   background-size: cover;
   background-position: center;
   margin: 0 calc(-1 * var(--xr));
 
   &.active {
-    background-image: url('../../images/about/top_nizhny.jpg');
+    background-image: url('/images/about/top_nizhny.jpg');
   }
 
   @media (--s) {
@@ -27,7 +27,7 @@
     right: 0;
     bottom: 0;
     height: calc(var(--yr) * 36);
-    background: linear-gradient(to top, color-mod(#000 alpha(-30%)), color-mod(#000 alpha(-100%)));
+    background: linear-gradient(to top, rgb(from #000 r g b / 70%), rgb(from #000 r g b / 0));
     z-index: 0;
 
     @media (--m) {
@@ -55,7 +55,7 @@
 }
 
 .description {
-  composes: at from '../Fonts.module.css';
+  composes: at from '../fonts.module.css';
 
   @media (--l) {
     width: calc(12 / 16 * 100%);
@@ -72,13 +72,13 @@
 }
 
 .tables {
-  background-image: url('../../images/about/tables_moscow.jpg');
+  background-image: url('/images/about/tables_moscow.jpg');
   background-size: cover;
   background-position: 50%;
   background-color: #f1f1f1;
 
   &.active {
-    background-image: url('../../images/about/tables_nizhny.jpg');
+    background-image: url('/images/about/tables_nizhny.jpg');
   }
 
   &::before {
@@ -118,13 +118,13 @@
   }
 
   & .feel {
-    background-image: url('../../images/about/feel_moscow.jpg');
+    background-image: url('/images/about/feel_moscow.jpg');
     background-size: cover;
     background-position: 50%;
     background-color: #f1f1f1;
 
     &.active {
-      background-image: url('../../images/about/feel_nizhny.jpg');
+      background-image: url('/images/about/feel_nizhny.jpg');
     }
 
     &::before {
@@ -142,7 +142,7 @@
 }
 
 .quote {
-  composes: at from '../Fonts.module.css';
+  composes: at from '../fonts.module.css';
 
   @media (--s) {
     padding-right: 25%;
@@ -154,12 +154,7 @@
     margin-right: auto;
   }
 
-  & .txt {
-    font-family: var(--ff_serif);
-  }
-
   & .author {
-    font-family: var(--fn_serif);
     color: #727272;
   }
 }
@@ -180,13 +175,13 @@
 
   & .first {
     margin-bottom: calc(var(--yr) * 3);
-    background-image: url('../../images/about/two_images_1_moscow.jpg');
+    background-image: url('/images/about/two_images_1_moscow.jpg');
     background-size: cover;
     background-position: 50%;
     background-color: #f1f1f1;
 
     &.active {
-      background-image: url('../../images/about/two_images_1_nizhny.jpg');
+      background-image: url('/images/about/two_images_1_nizhny.jpg');
     }
 
     &::before {
@@ -200,13 +195,13 @@
 
   & .second {
     margin-bottom: calc(var(--yr) * 3);
-    background-image: url('../../images/about/two_images_2_moscow.jpg');
+    background-image: url('/images/about/two_images_2_moscow.jpg');
     background-size: cover;
     background-position: 50%;
     background-color: #f1f1f1;
 
     &.active {
-      background-image: url('../../images/about/two_images_2_nizhny.jpg');
+      background-image: url('/images/about/two_images_2_nizhny.jpg');
     }
 
     &::before {
@@ -244,7 +239,7 @@
 }
 
 .contacts {
-  composes: small from '../Fonts.module.css';
+  composes: small from '../fonts.module.css';
 
   @media (--s) {
     grid-column: 10 / 13;
@@ -288,7 +283,7 @@
 
   & .road {
     margin-bottom: calc(var(--yr) * 3);
-    background-image: url('../../images/about/roads.jpg');
+    background-image: url('/images/about/roads.jpg');
     background-size: cover;
     background-position: 50%;
     background-color: #f1f1f1;

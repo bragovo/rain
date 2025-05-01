@@ -1,9 +1,9 @@
 import localFont from 'next/font/local'
 import classNames from "classnames";
 
-import "./globals.css";
 import 'normalize.css/normalize.css'
 import '@glidejs/glide/dist/css/glide.core.css'
+import "./globals.css";
 
 import Header from './layout/header';
 
