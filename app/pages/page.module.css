@@ -81,7 +81,7 @@
 }
 
 .description {
-  composes: at from './fonts.module.css';
+  composes: at from '../fonts.module.css';
 
   @media (--s) {
     display: grid;
@@ -106,7 +106,7 @@
 }
 
 .contacts {
-  composes: small from './fonts.module.css';
+  composes: small from '../fonts.module.css';
 
   & .button {
     margin-left: 0;
@@ -149,7 +149,7 @@
 }
 
 .free {
-  composes: small from './fonts.module.css';
+  composes: small from '../fonts.module.css';
   color: #727272;
 
   & li {
@@ -222,7 +222,7 @@
 }
 
 .book {
-  composes: small from './fonts.module.css';
+  composes: small from '../fonts.module.css';
   margin-top: calc(var(--yr) * 6);
 }
 
@@ -321,7 +321,7 @@
 
 .video_text {
   color: var(--grey_color);
-  composes: small from './fonts.module.css';
+  composes: small from '../fonts.module.css';
 }
 
 .design {

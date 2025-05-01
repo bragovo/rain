@@ -23,10 +23,17 @@ const FN = localFont({
   ]
 })
 
-export const metadata = {
-  title: "RAIN — ногтевая студия. Заботливый маникюр и педикюр в Москве.",
-  description: "Заботливый маникюр и педикюр в Москве.",
-};
+// export const metadata = {
+//   title: "RAIN — ногтевая студия. Заботливый маникюр и педикюр в Москве.",
+//   description: "Заботливый маникюр и педикюр в Москве.",
+// };
+
+// export async function generateMetadata({ params }) {
+//   return {
+//     title: "RAIN — ногтевая студия. Заботливый маникюр и педикюр в Москве.",
+//     description: "Заботливый маникюр и педикюр в Москве.",
+//   }
+// }
 
 export default function RootLayout({ children }) {
   return (

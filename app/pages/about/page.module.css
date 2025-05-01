@@ -55,7 +55,7 @@
 }
 
 .description {
-  composes: at from '../fonts.module.css';
+  composes: at from '../../fonts.module.css';
 
   @media (--l) {
     width: calc(12 / 16 * 100%);
@@ -142,7 +142,7 @@
 }
 
 .quote {
-  composes: at from '../fonts.module.css';
+  composes: at from '../../fonts.module.css';
 
   @media (--s) {
     padding-right: 25%;
@@ -239,7 +239,7 @@
 }
 
 .contacts {
-  composes: small from '../fonts.module.css';
+  composes: small from '../../fonts.module.css';
 
   @media (--s) {
     grid-column: 10 / 13;
