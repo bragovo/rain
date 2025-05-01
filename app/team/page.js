@@ -5,7 +5,7 @@ import page from '../pages.module.css'
 import styles from './page.module.css'
 
 export default function Team () {
-  const specialists = []
+  // const specialists = []
 
   return (
     <div className={page.root}>
@@ -51,32 +51,52 @@ export default function Team () {
       </section>
 
       <section className={classNames(styles.team, page.section)}>
-        {specialists &&
-          <div className={styles.specialists}>
-            {specialists.map((specialist, _) =>
-              <div className={styles.list} key={_}>
-                {specialist.photo &&
-                  <div className={styles.specialist}>
-                    <img src={`https://irinarain.com/s3/rs:fill:800:1000/g:sm/q:75/${specialist.photo.encoded_path}`} />
-                  </div>
-                }
-
-                {specialist.service &&
-                  <div className={styles.service}>
-                    {specialist.service}
-                  </div>
-                }
-
-                {specialist.name &&
-                  <div className={styles.name}>
-                    {specialist.name}
-                  </div>
-                }
+        <div className={styles.specialists}>
+          {specialists.map((specialist, _) =>
+            <div className={styles.list} key={_}>
+              <div className={styles.specialist}>
+                <img src={specialist.photo} />
               </div>
-            )}
-          </div>
-        }
+
+              <div className={styles.service}>
+                {specialist.service}
+              </div>
+
+              <div className={styles.name}>
+                {specialist.name}
+              </div>
+            </div>
+          )}
+        </div>
       </section>
     </div>
   )
 }
+
+
+export const specialists = [
+  {
+    "name": "Надя",
+    "service": "Мастер маникюра и педикюра",
+    "yid": "720952",
+    "photo": "/images/team/spec/1.jpg"
+  },
+  {
+    "name": "Азалия",
+    "service": "Мастер маникюра и педикюра",
+    "yid": "686561",
+    "photo": "/images/team/spec/2.jpg"
+  },
+  {
+    "name": "Вероника",
+    "service": "Топ-мастер маникюра и педикюра",
+    "yid": "218780",
+    "photo": "/images/team/spec/3.jpg"
+  },
+  {
+    "name": "Ирина",
+    "service": "Основатель RAIN, топ-мастер маникюра и педикюра, мастер-бровист",
+    "yid": "207096",
+    "photo": "/images/team/spec/4.png"
+  }
+]
