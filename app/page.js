@@ -1,33 +1,19 @@
 "use client"
 
 import React, { useEffect, useRef } from 'react'
-// import PropTypes from 'prop-types'
+import Parallax from 'parallax-js'
+import Glide from '@glidejs/glide'
+import classNames from 'classnames'
 
 import Slider from './slider'
-// import Price from '../Price'
-// import Instagram from '../Instagram'
-import classNames from 'classnames'
+import Prices from './prices'
+import { specialists } from './team/page'
+
 import pages from './pages.module.css'
 import button from './button.module.css'
 import styles from './page.module.css'
 
-import { specialists } from './team/page'
-// import { deserialize } from 'jsonapi-deserializer'
-
-import Parallax from 'parallax-js'
-import Glide from '@glidejs/glide'
-
-// Index.propTypes = {
-//   city: PropTypes.string,
-//   specialists: PropTypes.object,
-//   prices: PropTypes.object,
-//   instagram: PropTypes.string
-// }
-
-export default function Index ({ city, specialists: specialistsData, prices: pricesData, instagram }) {
-  // const prices = deserialize(pricesData)
-  // const specialists = deserialize(specialistsData)
-  const prices = []
+export default function Index () {
   const list = useRef()
   const scene = useRef()
 
@@ -167,10 +153,7 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
       </section>
 
       <section className={pages.section}>
-        {/* <Price
-          city={city}
-          prices={prices}
-        /> */}
+        <Prices />
       </section>
 
       <section className={classNames(pages.section, styles.instagram)}>
