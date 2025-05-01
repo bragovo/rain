@@ -1,3 +1,32 @@
+:root {
+  --fw_light: 300;
+  --fw_normal: 400;
+  --fw_bold: 600;
+
+  --xr: 1.25rem;
+  --yr: 0.25rem;
+
+  --base_color: #212121;
+  --light_color: #ffffff;
+  --grey_color: #727272;
+  --light_grey_color: #c1c1c1;
+
+  --fs: 3.5;
+  --lh: 5;
+
+  --s1: 3;
+  --s2: 6;
+  --s4: 7.5;
+  --s5: 9;
+
+  @media (--s) {
+    --s1: 4;
+    --s2: 8;
+    --s4: 16;
+    --s5: 24;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
