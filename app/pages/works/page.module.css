@@ -50,7 +50,7 @@
 }
 
 .button {
-  composes: small from '../fonts.module.css';
+  composes: small from '../../fonts.module.css';
   text-transform: uppercase;
   text-decoration: none;
   background: black;
@@ -70,7 +70,7 @@
 }
 
 .description {
-  composes: at from '../fonts.module.css';
+  composes: at from '../../fonts.module.css';
 
   @media (--l) {
     width: calc(12 / 16 * 100%);

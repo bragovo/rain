@@ -7,7 +7,7 @@ import classNames from 'classnames'
 
 import Slider from '../slider'
 import Prices from '../prices'
-import { specialists } from '../team/page'
+import { specialists } from '../pages/team/page'
 
 import pages from '../pages.module.css'
 import button from '../button.module.css'

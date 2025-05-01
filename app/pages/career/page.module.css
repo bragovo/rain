@@ -79,7 +79,7 @@
 }
 
 .description {
-  composes: at from '../fonts.module.css';
+  composes: at from '../../fonts.module.css';
 
   @media (--l) {
     width: calc(12 / 16 * 100%);

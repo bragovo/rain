@@ -23,10 +23,13 @@ const FN = localFont({
   ]
 })
 
-// export const metadata = {
-//   title: "RAIN — ногтевая студия. Заботливый маникюр и педикюр в Москве.",
-//   description: "Заботливый маникюр и педикюр в Москве.",
-// };
+export const metadata = {
+  openGraph: {
+    title: 'Acme',
+    description: 'Acme is a...',
+    image: "/images/og.jpg"
+  },
+};
 
 // export async function generateMetadata({ params }) {
 //   return {
@@ -34,6 +37,7 @@ const FN = localFont({
 //     description: "Заботливый маникюр и педикюр в Москве.",
 //   }
 // }
+
 
 export default function RootLayout({ children }) {
   return (

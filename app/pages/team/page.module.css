@@ -52,7 +52,7 @@
 }
 
 .description {
-  composes: at from '../fonts.module.css';
+  composes: at from '../../fonts.module.css';
 
   @media (--l) {
     width: calc(12 / 16 * 100%);
@@ -137,7 +137,7 @@
 }
 
 .name {
-  composes: h2 from '../fonts.module.css';
+  composes: h2 from '../../fonts.module.css';
 }
 
 .list {
