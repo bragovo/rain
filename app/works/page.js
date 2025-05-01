@@ -1,9 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import styles from './Works.module.css'
-import page from '../Page.module.css'
-import works from '../../video/works.mp4'
+import page from '../pages.module.css'
+import styles from './page.module.css'
 
 export default function Works () {
   return (
@@ -11,7 +10,7 @@ export default function Works () {
       <div className={styles.top}>
         <div className={styles.video}>
           <video playsInline autoPlay loop muted>
-            <source src={works} type="video/mp4"></source>
+            <source src="/video/works.mp4" type="video/mp4"></source>
           </video>
         </div>
         <div className={styles.placeholder}></div>
