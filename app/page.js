@@ -10,6 +10,8 @@ import classNames from 'classnames'
 import pages from './pages.module.css'
 import button from './button.module.css'
 import styles from './page.module.css'
+
+import { specialists } from './team/page'
 // import { deserialize } from 'jsonapi-deserializer'
 
 import Parallax from 'parallax-js'
@@ -26,7 +28,6 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
   // const prices = deserialize(pricesData)
   // const specialists = deserialize(specialistsData)
   const prices = []
-  const specialists =[]
   const list = useRef()
   const scene = useRef()
 
@@ -71,27 +72,12 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
         </div>
 
         <div className={styles.contacts}>
-          {city === 'moscow' &&
-            <>
-              <p>+7 926 042-58-85</p>
-              <p>10:00 — 22:00</p>
-              <p>Духовской переулок, дом 17, строение 15 <br />Москва</p>
-              <p>
-                <a className={classNames('ms_booking', button.sign_up, styles.button)} href="#" data-url="https://n81206.yclients.com/company:95580">Записаться</a>
-              </p>
-            </>
-          }
-
-          {city === 'nizhny' &&
-            <>
-              <p>+7 920 111-56-88</p>
-              <p>10:00 — 21:00</p>
-              <p>улица Варварская, дом 32, 4 этаж <br />Нижний Новгород</p>
-              <p>
-                <a className={classNames('ms_booking', button.sign_up, styles.button)} href="#" data-url="https://n81206.yclients.com/company:58259">Записаться</a>
-              </p>
-            </>
-          }
+          <p>+7 926 042-58-85</p>
+          <p>10:00 — 22:00</p>
+          <p>Духовской переулок, дом 17, строение 15 <br />Москва</p>
+          <p>
+            <a className={classNames('ms_booking', button.sign_up, styles.button)} href="#" data-url="https://n81206.yclients.com/company:95580">Записаться</a>
+          </p>
         </div>
       </section>
 
@@ -133,17 +119,13 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
               <div className={classNames('glide__slides')}>
                 {specialists.map((specialist, _) =>
                   <div className={classNames('glide__slide', styles.master)} key={_} >
-                    {specialist.photo &&
-                      <div className={styles.photo}>
-                        <img src={`https://irinarain.com/s3/rs:fill:800:1000/g:sm/q:75/${specialist.photo.encoded_path}`} />
-                      </div>
-                    }
+                    <div className={styles.photo}>
+                      <img src={specialist.photo} />
+                    </div>
 
-                    {specialist.name && specialist.service &&
-                      <div className={styles.name}>
-                        {specialist.name} | <span className={styles.service}>{specialist.service}</span>
-                      </div>
-                    }
+                    <div className={styles.name}>
+                      {specialist.name} | <span className={styles.service}>{specialist.service}</span>
+                    </div>
 
                     <div className={styles.book}>
                       <a className={classNames('ms_booking', button.sign_up, styles.button)} href="#" data-url={`https://n81206.yclients.com/?o=m${specialist.yid}`}>Записаться</a>
