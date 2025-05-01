@@ -1,16 +1,13 @@
+"use client"
+
 import React, { useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
 import Parallax from 'parallax-js'
 import classNames from 'classnames'
 
-import styles from './Career.module.css'
-import page from '../Page.module.css'
+import page from '../pages.module.css'
+import styles from './page.module.css'
 
-Career.propTypes = {
-  city: PropTypes.string
-}
-
-export default function Career ({ city }) {
+export default function Career () {
   const scene = useRef()
 
   useEffect(() => {
@@ -78,17 +75,9 @@ export default function Career ({ city }) {
 
         <div className={styles.list}>
           <ul>
-            {city === 'moscow' &&
-              <li>
-                чистое, уютное, стильное пространство в лофт апартаментах The Loft Club;
-              </li>
-            }
-
-            {city === 'nizhny' &&
-              <li>
-                чистое, уютное, стильное пространство;
-              </li>
-            }
+            <li>
+              чистое, уютное, стильное пространство в лофт апартаментах The Loft Club;
+            </li>
 
             <li>
               оборудованное рабочее место;
@@ -139,13 +128,7 @@ export default function Career ({ city }) {
       </section>
 
       <section className={classNames(page.section, styles.vacancies)}>
-        {city === 'moscow' &&
-          <h2>Вакансии в Москве</h2>
-        }
-
-        {city === 'nizhny' &&
-          <h2>Вакансии в Нижнем Новгороде</h2>
-        }
+        <h2>Вакансии в Москве</h2>
 
         <div className={styles.vacancy}>
           <h3>Мастер маникюра и педикюра</h3>
@@ -189,33 +172,17 @@ export default function Career ({ city }) {
           </p>
 
           <ul>
-            {city === 'moscow' &&
-              <li>
-                мастер зарабатывает 40, 50 или 60% от выручки (не меньше 60 000 ₽ в месяц);
-              </li>
-            }
-
-            {city === 'nizhny' &&
-              <li>
-                мастер зарабатывает 40, 50 или 60% от выручки (не меньше 40 000 ₽ в месяц);
-              </li>
-            }
+            <li>
+              мастер зарабатывает 40, 50 или 60% от выручки (не меньше 60 000 ₽ в месяц);
+            </li>
 
             <li>
               возможный график работы 2/2, 3/2 или 4/2;
             </li>
 
-            {city === 'moscow' &&
-              <li>
-                начало рабочего дня в 11:00, окончание в 22:00.
-              </li>
-            }
-
-            {city === 'nizhny' &&
-              <li>
-                начало рабочего дня в 10:00, окончание в 21:00.
-              </li>
-            }
+            <li>
+              начало рабочего дня в 11:00, окончание в 22:00.
+            </li>
           </ul>
 
           <p>

@@ -3,7 +3,7 @@
   position: relative;
   color: #fff;
   height: 400px;
-  background-image: url('../../images/career/top.jpg');
+  background-image: url('/images/career/top.jpg');
   background-size: cover;
   background-position: center;
   margin: 0 calc(-1 * var(--xr));
@@ -24,7 +24,7 @@
     right: 0;
     bottom: 0;
     height: calc(var(--yr) * 36);
-    background: linear-gradient(to top, color-mod(#000 alpha(-30%)), color-mod(#000 alpha(-100%)));
+    background: linear-gradient(to top, rgb(from #000 r g b / 70%), rgb(from #000 r g b / 0));
     z-index: 0;
 
     @media (--m) {
@@ -70,16 +70,16 @@
   top: -5%;
 
   & .l {
-    background-image: url('../../images/career/top_l.png');
+    background-image: url('/images/career/top_l.png');
   }
 
   & .r {
-    background-image: url('../../images/career/top_r.png');
+    background-image: url('/images/career/top_r.png');
   }
 }
 
 .description {
-  composes: at from '../Fonts.module.css';
+  composes: at from '../fonts.module.css';
 
   @media (--l) {
     width: calc(12 / 16 * 100%);
@@ -123,7 +123,7 @@
 }
 
 .rain {
-  background-image: url('../../images/career/rain.jpg');
+  background-image: url('/images/career/rain.jpg');
   background-color: #f1f1f1;
   background-position: 50%;
   background-size: cover;
@@ -185,7 +185,7 @@
 
   & .develop {
     margin-bottom: calc(var(--yr) * 9);
-    background-image: url('../../images/career/dev.jpg');
+    background-image: url('/images/career/dev.jpg');
     background-color: #f1f1f1;
     background-position: 50%;
     background-size: cover;
