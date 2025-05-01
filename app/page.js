@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react'
 // import PropTypes from 'prop-types'
 
-// import Slider from '../Slider'
+import Slider from './slider'
 // import Price from '../Price'
 // import Instagram from '../Instagram'
 import classNames from 'classnames'
@@ -82,7 +82,7 @@ export default function Index ({ city, specialists: specialistsData, prices: pri
       </section>
 
       <section className={classNames(pages.section, styles.slider)}>
-        {/* <Slider /> */}
+        <Slider />
       </section>
 
       <section className={classNames(pages.section, styles.space)}>
