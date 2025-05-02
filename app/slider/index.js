@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import Glide from '@glidejs/glide'
 
+import '@glidejs/glide/dist/css/glide.core.css'
 import styles from './index.module.css'
 
 export default function Slider () {
