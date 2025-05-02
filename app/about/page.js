@@ -1,6 +1,6 @@
 import React from 'react'
 
-import AboutPage from '../pages/about/page';
+import AboutPage from '../pages/about';
 import { getMetadata } from '../shared-metadata'
 
 export async function generateMetadata() {

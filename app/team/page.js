@@ -1,6 +1,6 @@
 import React from 'react'
 
-import TeamPage from '../pages/team/page'
+import TeamPage from '../pages/team'
 import { getMetadata } from '../shared-metadata'
 
 export async function generateMetadata() {

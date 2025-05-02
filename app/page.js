@@ -1,6 +1,6 @@
 import React from 'react'
 
-import IndexPage from './pages/page'
+import IndexPage from './pages'
 import { getMetadata } from './shared-metadata'
 
 export async function generateMetadata() {

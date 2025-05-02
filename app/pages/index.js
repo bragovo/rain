@@ -7,11 +7,11 @@ import classNames from 'classnames'
 
 import Slider from '../slider'
 import Prices from '../prices'
-import { specialists } from '../pages/team/page'
+import { specialists } from './team'
 
 import pages from '../pages.module.css'
 import button from '../button.module.css'
-import styles from './page.module.css'
+import styles from './index.module.css'
 
 export default function IndexPage () {
   const list = useRef()

@@ -6,7 +6,7 @@ import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
 import classNames from 'classnames'
 import page from '../../pages.module.css'
-import styles from './page.module.css'
+import styles from './index.module.css'
 
 export const playfair = Playfair_Display({
   subsets: ['cyrillic'],

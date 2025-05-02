@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CareerPage from '../pages/career/page'
+import CareerPage from '../pages/career'
 import { getMetadata } from '../shared-metadata'
 
 export async function generateMetadata() {
