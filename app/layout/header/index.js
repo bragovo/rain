@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react'
+import { usePathname } from "next/navigation";
 import classNames from 'classnames'
 
 import button from '../../button.module.css'
@@ -18,7 +19,8 @@ function Logo() {
   )
 }
 
-export default function Header () {
+export default function Header() {
+  const pathname = usePathname();
   const [toggle, setToggle] = useState(false)
   const yc = useRef()
   const [init, setInit] = useState(false)
@@ -33,6 +35,10 @@ export default function Header () {
       setInit(true)
     }
   }, [])
+
+  useEffect(() => {
+    setToggle(false)
+  }, [pathname]);
 
   return (
     <div className={classNames(styles.header, { [styles.toggled]: toggle })}>
