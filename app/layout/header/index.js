@@ -50,19 +50,19 @@ export default function Header () {
 
         <div className={styles.header_menu}>
           <div className={styles.header_menu_item}>
-            <Link href="/about">Пространство</Link>
+            <Link href="/about/">Пространство</Link>
           </div>
           <div className={classNames(styles.in, styles.header_menu_item)}>
             <a>Услуги</a>
           </div>
           <div className={styles.header_menu_item}>
-            <Link href="/works">Работы</Link>
+            <Link href="/works/">Работы</Link>
           </div>
           <div className={styles.header_menu_item}>
-            <Link href="/team">Команда</Link>
+            <Link href="/team/">Команда</Link>
           </div>
           <div className={styles.header_menu_item}>
-            <Link href="/career">Вакансии</Link>
+            <Link href="/career/">Вакансии</Link>
           </div>
           <div className={classNames(styles.in, styles.header_menu_item)}>
             <a>Ценности</a>

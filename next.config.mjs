@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  trailingSlash: false,
-  skipTrailingSlashRedirect: false,
+  trailingSlash: true,
+  // skipTrailingSlashRedirect: true,
 };
 
 export default nextConfig;
